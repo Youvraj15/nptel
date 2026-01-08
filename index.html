@@ -1,58 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Course Certificate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPTEL Course Certificate</title>
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f5f7fa;
-            font-family: Arial, sans-serif;
-        }
-
-        #btn {
-            padding: 14px 28px;
-            font-size: 16px;
-            background: #2f6fed;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        #viewer {
-            display: none;
-            width: 100%;
-            height: 100vh;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-
-<button id="btn" onclick="showCertificate()">Course Certificate</button>
-
-<div id="viewer">
-    <iframe src="certificate.pdf"></iframe>
-</div>
-
-<script>
-    function showCertificate() {
-        document.getElementById("btn").style.display = "none";
-        document.getElementById("viewer").style.display = "block";
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      text-align: center;
     }
-</script>
 
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cbd5f5;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 20px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 22px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    a.button:hover {
+      background: #0ea5e9;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 30px;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>NPTEL Course Certificate</h1>
+    <p>Innovation, Business Models and Entrepreneurship</p>
+
+    <div class="buttons">
+      <a class="button" href="./Certificate.pdf" target="_blank">View Certificate</a>
+      <a class="button" href="./Certificate.pdf" download>Download Certificate</a>
+    </div>
+
+    <iframe src="./Certificate.pdf"></iframe>
+
+    <footer>
+      <p>Hosted using GitHub Pages</p>
+    </footer>
+  </div>
 </body>
 </html>
